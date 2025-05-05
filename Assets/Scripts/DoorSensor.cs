@@ -11,7 +11,7 @@ public class DoorSensor : MonoBehaviour
     private bool isOpen = false;
 
     private void OnTriggerEnter(Collider other)
-    {
+    {Debug.Log("Karta priložená, otváram dvere!");
         if (!isOpen && other.CompareTag(keyTag))
         {
             Debug.Log("Karta priložená, otváram dvere!");
