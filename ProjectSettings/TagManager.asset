@@ -8,6 +8,7 @@ TagManager:
   - Kladivo
   - Weapon
   - KeyCard
+  - Enemy
   layers:
   - Default
   - TransparentFX

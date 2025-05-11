@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPCMovementScript : MonoBehaviour
 {
@@ -127,9 +128,16 @@ public class NPCMovementScript : MonoBehaviour
         }
         else if (collision.collider.CompareTag("Player"))
         {
-            if (!isStunned) // Ak nie je omráčený, môže útočiť
+            if (!isStunned)
             {
                 StartCoroutine(PunchCoroutine());
+
+                // Zobraz Game Over menu
+                VRMenuController menu = FindObjectOfType<VRMenuController>();
+                if (menu != null)
+                {
+                    menu.ShowGameOver();
+                }
             }
         }
     }
