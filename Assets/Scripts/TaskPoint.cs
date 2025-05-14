@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TaskPoint : MonoBehaviour
 {
-    public TaskManager objectiveManager;
+    public TaskManager taskManager;   
+    public int objectiveIndex;
 
     private bool triggered = false;
 
@@ -12,8 +13,11 @@ public class TaskPoint : MonoBehaviour
     {
         if (!triggered && other.CompareTag("Player"))
         {
-            triggered = true;
-            objectiveManager.CompleteObjective();
+            if (taskManager.IsCurrentObjective(objectiveIndex))
+            {
+                triggered = true;
+                taskManager.CompleteObjective();
+            }
         }
     }
 }

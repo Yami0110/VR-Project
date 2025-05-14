@@ -1199,7 +1199,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 5
+  speed: 4
   sensor: {fileID: 6563378257545654847}
   detectionRange: 35
   player: {fileID: 0}

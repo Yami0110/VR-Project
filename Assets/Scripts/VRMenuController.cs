@@ -9,6 +9,7 @@ public class VRMenuController : MonoBehaviour
 {
     public GameObject menuCanvas;
     public GameObject startPanel;
+    public GameObject gameClearPanel;
     public GameObject resetPanel;
     public GameObject gameOverPanel;
 
@@ -30,6 +31,7 @@ public class VRMenuController : MonoBehaviour
     void Start()
     {
         ShowStartPanel();
+        gameClearPanel.SetActive(false);
         gameOverPanel.SetActive(false);
     }
 
